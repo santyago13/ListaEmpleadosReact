@@ -5,7 +5,7 @@ const AgregarEmpleados = () => {
   return (
     <div>
       <h3 className="text-center">Agregar Empleados</h3>
-      <Form className="gap-3 justify-content-center">
+      <Form className="gap-3 justify-content-center border p-3 rounded-3 shadow mt-3">
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Nombre Completo</Form.Label>
           <Form.Control type="text" placeholder="Juan Perez" />
@@ -27,7 +27,7 @@ const AgregarEmpleados = () => {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-            Agregar Empleado
+          Agregar Empleado
         </Button>
       </Form>
     </div>

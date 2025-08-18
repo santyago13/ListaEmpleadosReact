@@ -10,6 +10,7 @@ function App() {
       </nav>
       <main className="container mt-4">
         <AgregarEmpleados />
+        <div className="border m-3"></div>
         <ListaEmpleados />
       </main>
     </>
