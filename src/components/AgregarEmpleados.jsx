@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { use, useState } from "react";
+import { useState } from "react";
+import ListaEmpleados from "./ListaEmpleados";
 import Empleados from "../ClaseEmpleados";
 
 const AgregarEmpleados = () => {
@@ -23,7 +24,7 @@ const AgregarEmpleados = () => {
     // enviar el nuevo empleado al array guardarEmpleado
     guardarEmpleado.push(nuevoEmpleado);
     //mostrar mensaje de éxito
-    console.log("Empleado agregado:", nuevoEmpleado);
+    console.log(guardarEmpleado);
   }
 
   return (
@@ -34,7 +35,8 @@ const AgregarEmpleados = () => {
           <Form.Label>Nombre Completo</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Juan Perez"
+            placeholder="Ej: Juan Perez"
+            required
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
@@ -44,7 +46,8 @@ const AgregarEmpleados = () => {
           <Form.Label>Cargo</Form.Label>
           <Form.Control
             type="text"
-            placeholder="CEO"
+            placeholder="Ej: CEO"
+            required
             value={cargo}
             onChange={(e) => setCargo(e.target.value)}
           />
@@ -54,7 +57,8 @@ const AgregarEmpleados = () => {
           <Form.Label>Depertamento</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Marketing"
+            placeholder="Ej: Marketing"
+            required
             value={departamento}
             onChange={(e) => {
               setDepartamento(e.target.value);
@@ -66,6 +70,7 @@ const AgregarEmpleados = () => {
           <Form.Label>Foto de Perfil</Form.Label>
           <Form.Control
             type="text"
+            required
             placeholder="URL de la foto"
             value={imagen}
             onChange={(e) => {

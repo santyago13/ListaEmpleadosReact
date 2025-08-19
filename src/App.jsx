@@ -1,6 +1,7 @@
 import ListaEmpleados from "./components/ListaEmpleados.jsx";
 import Nav from "./components/Nav.jsx";
 import AgregarEmpleados from "./components/AgregarEmpleados.jsx";
+import { useState } from "react";
 
 function App() {
   return (
